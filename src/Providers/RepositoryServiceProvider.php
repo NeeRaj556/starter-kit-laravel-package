@@ -2,11 +2,10 @@
 
 namespace src\Providers;
 
-use App\Interfaces\CrudRepositoryInterface;
+use src\Interfaces\CrudRepositoryInterface;
 use Illuminate\Support\ServiceProvider;
-use App\Interfaces\ProductRepositoryInterface;
-use App\Repositories\CrudRepository;
-use App\Repositories\ProductRepository;
+use src\Interfaces\ProductRepositoryInterface;
+use src\Repositories\CrudRepository;
 
 class RepositoryServiceProvider extends ServiceProvider
 {
