@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Repositories;
+namespace src\Repositories;
 
 use App\Interfaces\CrudRepositoryInterface;
 use Illuminate\Database\Eloquent\Model;

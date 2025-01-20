@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Providers;
+namespace src\Providers;
 
- use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\ServiceProvider;
 
 
 class StarterKitProvider extends ServiceProvider
@@ -12,7 +12,7 @@ class StarterKitProvider extends ServiceProvider
      */
     public function register(): void
     {
-      //
+        //
     }
 
     /**
@@ -20,10 +20,10 @@ class StarterKitProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        $this->loadRoutesFrom(__DIR__.'/../routes/api.php');
-        $this->loadMigrationsFrom(__DIR__.'/../migrations');
+        $this->loadRoutesFrom(__DIR__ . '/../routes/api.php');
+        $this->loadMigrationsFrom(__DIR__ . '/../migrations');
         $this->publishes([
-            __DIR__.'/../config/config.php' => config_path('catalyst-starterKit-fastApi.php'),
+            __DIR__ . '/../config/config.php' => config_path('catalyst-starterKit-fastApi.php'),
         ]);
     }
 }

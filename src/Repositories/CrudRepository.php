@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Repositories;
+namespace src\Repositories;
 
 use App\Classes\ApiResponseClass;
 use App\Interfaces\CrudRepositoryInterface;

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace src\Providers;
 
 use App\Interfaces\CrudRepositoryInterface;
 use Illuminate\Support\ServiceProvider;
