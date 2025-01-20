@@ -29,8 +29,8 @@
   "extra": {
     "laravel": {
       "providers": [
-        "neeraj\\catalyst-starterKit-fastApi\\src\\Providers\\RepositoryServiceProvider",
-        "neeraj\\catalyst-starterKit-fastApi\\src\\Providers\\StarterKitProvider"
+        "neeraj\\catalyst-starterKit-fastApi\\Providers\\RepositoryServiceProvider",
+        "neeraj\\catalyst-starterKit-fastApi\\Providers\\StarterKitProvider"
       ]
     }
   },

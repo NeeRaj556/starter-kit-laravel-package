@@ -1,9 +1,9 @@
 <?php
 
-namespace src\Repositories;
+namespace Repositories;
 
-use App\Classes\ApiResponseClass;
-use App\Interfaces\CrudRepositoryInterface;
+use Classes\ApiResponseClass;
+use Interfaces\CrudRepositoryInterface;
 use Illuminate\Database\Eloquent\Model;
 
 

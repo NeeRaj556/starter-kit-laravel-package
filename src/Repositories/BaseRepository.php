@@ -1,8 +1,8 @@
 <?php
 
-namespace src\Repositories;
+namespace Repositories;
 
-use App\Interfaces\CrudRepositoryInterface;
+use Interfaces\CrudRepositoryInterface;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 

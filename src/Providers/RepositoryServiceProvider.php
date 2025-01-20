@@ -1,11 +1,11 @@
 <?php
 
-namespace src\Providers;
+namespace Providers;
 
-use src\Interfaces\CrudRepositoryInterface;
+use Interfaces\CrudRepositoryInterface;
 use Illuminate\Support\ServiceProvider;
-use src\Interfaces\ProductRepositoryInterface;
-use src\Repositories\CrudRepository;
+use Interfaces\ProductRepositoryInterface;
+use Repositories\CrudRepository;
 
 class RepositoryServiceProvider extends ServiceProvider
 {
