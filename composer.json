@@ -3,6 +3,8 @@
   "description": "Laravel Starter Kit with Authentication and CRUD Repository",
   "type": "library",
   "license": "MIT",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
   "authors": [
     {
       "name": "Niraj Bajagain",
@@ -33,10 +35,4 @@
       "@php artisan storage:link"
     ]
   },
-  "repositories": [
-    {
-      "type": "path",
-      "url": "../catalyst-starterKit-fastApi"
-    }
-  ]
 }
