@@ -1,6 +1,6 @@
 <?php
 
-Http\Requests;
+namespace catalyst\StarterKitFastApi\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 

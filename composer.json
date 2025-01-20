@@ -18,14 +18,14 @@
   },
   "autoload": {
     "psr-4": {
-      "neeraj\\catalyst-starterKit-fastApi\\": "src"
+      "catalyst\\StarterKitFastApi\\": "src"
     }
   },
   "extra": {
     "laravel": {
       "providers": [
-        "neeraj\\catalyst-starterKit-fastApi\\Providers\\RepositoryServiceProvider",
-        "neeraj\\catalyst-starterKit-fastApi\\Providers\\StarterKitProvider"
+        "catalyst\\StarterKitFastApi\\Providers\\RepositoryServiceProvider",
+        "catalyst\\StarterKitFastApi\\Providers\\StarterKitProvider"
       ]
     }
   },

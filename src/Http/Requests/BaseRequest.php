@@ -1,6 +1,6 @@
 <?php
 
-name Http\Requests;
+namespace catalyst\StarterKitFastApi\Http\Requests;
 
 use Illuminate\Contracts\Validation\Validator;
 

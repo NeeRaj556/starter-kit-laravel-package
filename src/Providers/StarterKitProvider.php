@@ -1,6 +1,6 @@
 <?php
 
-namespace Providers;
+namespace catalyst\StarterKitFastApi\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Repositories;
+namespace catalyst\StarterKitFastApi\Repositories;
 
 use Interfaces\CrudRepositoryInterface;
 use Illuminate\Database\Eloquent\Model;

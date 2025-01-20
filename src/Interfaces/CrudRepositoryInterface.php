@@ -1,6 +1,6 @@
 <?php
 
-Interfaces;
+namespace catalyst\StarterKitFastApi\Interfaces;
 
 use Illuminate\Database\Eloquent\Model;
 
