@@ -1,12 +1,12 @@
 <?php
 
-namespace Http\Controllers;
+namespace catalyst\StarterKitFastApi\Http\Controllers;
 
-use App\Http\Requests\StoreProductRequest;
-use App\Http\Requests\UpdateProductRequest;
-use App\Interfaces\CrudRepositoryInterface;
-use App\Models\Product;
-use App\Repositories\CrudRepository;
+use catalyst\StarterKitFastApi\Http\Requests\StoreProductRequest;
+use catalyst\StarterKitFastApi\Http\Requests\UpdateProductRequest;
+use catalyst\StarterKitFastApi\Interfaces\CrudRepositoryInterface;
+use catalyst\StarterKitFastApi\Models\Product;
+use catalyst\StarterKitFastApi\Repositories\CrudRepository;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller

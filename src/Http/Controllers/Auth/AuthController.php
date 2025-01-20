@@ -1,16 +1,16 @@
 <?php
 
-namespace Http\Controllers\Auth;
+namespace catalyst\StarterKitFastApi\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
-use App\Http\Requests\Auth\RegisterValidation;
-use App\Models\User;
+use catalyst\StarterKitFastApi\Http\Controllers\Controller;
+use catalyst\StarterKitFastApi\Http\Requests\Auth\RegisterValidation;
+use catalyst\StarterKitFastApi\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Tymon\JWTAuth\Facades\JWTAuth;
 use Tymon\JWTAuth\Exceptions\JWTException;
-use App\Repositories\CrudRepository;
+use catalyst\StarterKitFastApi\Repositories\CrudRepository;
 
 class AuthController extends Controller
 {
