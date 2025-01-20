@@ -3,7 +3,8 @@
   "description": "Laravel Starter Kit with Authentication and CRUD Repository",
   "type": "library",
   "license": "MIT",
-  "minimum-stability": "dev",
+  
+ "minimum-stability": "dev",
   "prefer-stable": true,
   "authors": [
     {
@@ -12,6 +13,7 @@
     }
   ],
   "require": {
+    "neeraj/catalyst-starterkit-fastapi": "1.0.0",
     "php": ">=8.0",
     "laravel/framework": "^10.0",
     "tymon/jwt-auth": "^2.0"
