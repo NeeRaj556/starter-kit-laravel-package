@@ -13,8 +13,7 @@
     }
   ],
   "require": {
-    "neeraj/catalyst-starterkit-fastapi": "1.0.0",
-    "php": ">=8.0",
+     "php": ">=8.0",
     "laravel/framework": "^10.0",
     "tymon/jwt-auth": "^2.0"
   },
