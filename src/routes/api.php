@@ -1,8 +1,8 @@
 <?php
 
-use App\Http\Controllers\Auth\AuthController;
-use App\Http\Controllers\ProductController;
-use App\Http\Middleware\JwtMiddleware;
+use catalyst\StarterKitFastApi\Http\Controllers\Auth\AuthController;
+use catalyst\StarterKitFastApi\Http\Controllers\ProductController;
+use catalyst\StarterKitFastApi\Http\Middleware\JwtMiddleware;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
