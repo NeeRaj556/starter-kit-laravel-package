@@ -1,6 +1,6 @@
 <?php
 
-namespace src\Http\Controllers;
+namespace Http\Controllers;
 
 use App\Http\Requests\StoreProductRequest;
 use App\Http\Requests\UpdateProductRequest;
@@ -92,5 +92,4 @@ class ProductController extends Controller
         $this->interface->delete($this->model, $this->folder, $id);
         return response()->json(['message' => 'Product deleted successfully'], 200);
     }
-    
 }

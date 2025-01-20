@@ -1,6 +1,6 @@
 <?php
 
-namespace src\Http\Requests\Auth;
+namespace Http\Requests\Auth;
 
 use App\Http\Requests\BaseRequest;
 use App\Http\Requests\BaseRequestValidation;
