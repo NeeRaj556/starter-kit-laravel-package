@@ -46,7 +46,10 @@ class RepositoryServiceProvider extends ServiceProvider
             }
         }
         if (File::exists(base_path('.env'))) {
+            $envContent = File::get(base_path('.env'));
+            if (strpos($envContent, 'PAGINATE=') === false) {
             File::append(base_path('.env'), "\nPAGINATE=10");
+            }
         } else {
             File::copy(base_path('.env.example'), base_path('.env'));
             File::append(base_path('.env'), "\nPAGINATE=10");
