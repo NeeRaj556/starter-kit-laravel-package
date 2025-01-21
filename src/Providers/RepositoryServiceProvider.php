@@ -6,6 +6,8 @@ use Interfaces\CrudRepositoryInterface;
 use Illuminate\Support\ServiceProvider;
 use Interfaces\ProductRepositoryInterface;
 use Repositories\CrudRepository;
+use Illuminate\Support\Facades\File;
+
 
 class RepositoryServiceProvider extends ServiceProvider
 {
