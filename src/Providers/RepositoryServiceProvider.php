@@ -31,14 +31,19 @@ class RepositoryServiceProvider extends ServiceProvider
         ]);
         $filesToCopy = [
             __DIR__ . '/../Http/Controllers/ProductController.php' => app_path('Http/Controllers/ProductController.php'),
+            __DIR__ . '/../Http/Requests/BaseRequest.php' => app_path('Http/Requests/BaseRequest.php'),
             __DIR__ . '/../Http/Requests/StoreProductRequest.php' => app_path('Http/Requests/StoreProductRequest.php'),
             __DIR__ . '/../Http/Requests/UpdateProductRequest.php' => app_path('Http/Requests/UpdateProductRequest.php'),
+            __DIR__ . '/../Models/BaseModel' => app_path('Http/Models/BaseModel.php'),
+            __DIR__ . '/../Models/Product' => app_path('Http/Models/Product.php'),
+            __DIR__ . '/../migration/2025_01_19_061857_create_products_table.php' => database_path('migrations/2025_01_19_061857_create_products_table.php'),
+            
         ];
     
         foreach ($filesToCopy as $source => $destination) {
             if (!File::exists($destination)) {
-                File::ensureDirectoryExists(dirname($destination));
-                File::copy($source, $destination);
+            File::ensureDirectoryExists(dirname($destination));
+            File::move($source, $destination);
             }
         }
     }
