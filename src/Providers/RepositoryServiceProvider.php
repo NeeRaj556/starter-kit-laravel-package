@@ -34,8 +34,8 @@ class RepositoryServiceProvider extends ServiceProvider
             __DIR__ . '/../Http/Requests/BaseRequest.php' => app_path('Http/Requests/BaseRequest.php'),
             __DIR__ . '/../Http/Requests/StoreProductRequest.php' => app_path('Http/Requests/StoreProductRequest.php'),
             __DIR__ . '/../Http/Requests/UpdateProductRequest.php' => app_path('Http/Requests/UpdateProductRequest.php'),
-            __DIR__ . '/../Models/BaseModel' => app_path('Http/Models/BaseModel.php'),
-            __DIR__ . '/../Models/Product' => app_path('Http/Models/Product.php'),
+            __DIR__ . '/../Models/BaseModel.php' => app_path('Http/Models/BaseModel.php'),
+            __DIR__ . '/../Models/Product.php' => app_path('Http/Models/Product.php'),
             __DIR__ . '/../migration/2025_01_19_061857_create_products_table.php' => database_path('migrations/2025_01_19_061857_create_products_table.php'),
             
         ];
