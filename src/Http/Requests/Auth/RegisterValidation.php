@@ -1,9 +1,9 @@
 <?php
 
-namespace catalyst\StarterKitFastApi\Http\Requests\Auth;
+namespace catalyst\StarterKitRestApi\Http\Requests\Auth;
 
-use catalyst\StarterKitFastApiHttp\Http\Requests\BaseRequest;
-use catalyst\StarterKitFastApiHttp\Http\Requests\BaseRequestValidation;
+use catalyst\StarterKitRestApiHttp\Http\Requests\BaseRequest;
+use catalyst\StarterKitRestApiHttp\Http\Requests\BaseRequestValidation;
 use Illuminate\Foundation\Http\FormRequest;
 
 class RegisterValidation extends BaseRequest

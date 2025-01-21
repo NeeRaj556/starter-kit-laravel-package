@@ -1,6 +1,6 @@
 <?php
 
-namespace catalyst\StarterKitFastApi\Providers;
+namespace catalyst\StarterKitRestApi\Providers;
 
 use Interfaces\CrudRepositoryInterface;
 use Illuminate\Support\ServiceProvider;

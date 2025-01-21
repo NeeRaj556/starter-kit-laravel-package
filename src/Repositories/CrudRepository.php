@@ -1,6 +1,6 @@
 <?php
 
-namespace catalyst\StarterKitFastApi\Repositories;
+namespace catalyst\StarterKitRestApi\Repositories;
 
 use Classes\ApiResponseClass;
 use Interfaces\CrudRepositoryInterface;

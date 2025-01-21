@@ -1,5 +1,5 @@
 {
-  "name": "neeraj/catalyst-starterkit-fastapi",
+  "name": "neeraj/catalyst-starterkit-restapi",
   "description": "Laravel Starter Kit with Authentication and CRUD Repository",
   "type": "library",
   "license": "MIT",
@@ -18,14 +18,14 @@
   },
   "autoload": {
     "psr-4": {
-      "catalyst\\StarterKitFastApi\\": "src"
+      "catalyst\\StarterKitRestApi\\": "src"
     }
   },
   "extra": {
     "laravel": {
       "providers": [
-        "catalyst\\StarterKitFastApi\\Providers\\RepositoryServiceProvider",
-        "catalyst\\StarterKitFastApi\\Providers\\StarterKitProvider"
+        "catalyst\\StarterKitRestApi\\Providers\\RepositoryServiceProvider",
+        "catalyst\\StarterKitRestApi\\Providers\\StarterKitProvider"
       ]
     }
   },
@@ -38,7 +38,7 @@
   "repositories": [
     {
       "type": "vcs",
-      "url": "https://github.com/NeeRaj556/catalyst-starterkit-fastapi"
+      "url": "https://github.com/NeeRaj556/catalyst-starterkit-RestApi"
     }
   ]
 }

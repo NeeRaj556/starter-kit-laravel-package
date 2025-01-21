@@ -1,6 +1,6 @@
 <?php
 
-namespace catalyst\StarterKitFastApi\Http\Controllers;
+namespace catalyst\StarterKitRestApi\Http\Controllers;
 
 
 abstract class Controller
