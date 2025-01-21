@@ -25,8 +25,7 @@ class RepositoryServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->loadRoutesFrom(__DIR__.'/../routes/api.php');
-        $this->loadMigrationsFrom(__DIR__.'/../migrations');
-        $this->publishes([
+         $this->publishes([
             __DIR__.'/../config/config.php' => config_path('catalyst-starterKit-fastApi.php'),
         ]);
         $filesToCopy = [
@@ -46,5 +45,22 @@ class RepositoryServiceProvider extends ServiceProvider
             File::move($source, $destination);
             }
         }
+        if (File::exists(base_path('.env'))) {
+            File::append(base_path('.env'), "\nPAGINATE=10");
+        } else {
+            File::copy(base_path('.env.example'), base_path('.env'));
+            File::append(base_path('.env'), "\nPAGINATE=10");
+        }
+        $this->callAfterResolving('migrator', function ($migrator) {
+            $migrator->run(database_path('migrations'));
+        });
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                \Tymon\JWTAuth\Console\JWTGenerateSecretCommand::class,
+                \Illuminate\Foundation\Console\StorageLinkCommand::class,
+            ]);
+        }
+        
+       
     }
 }
