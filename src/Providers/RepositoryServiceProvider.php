@@ -30,9 +30,9 @@ class RepositoryServiceProvider extends ServiceProvider
             __DIR__.'/../config/config.php' => config_path('catalyst-starterKit-fastApi.php'),
         ]);
         $filesToCopy = [
-            __DIR__ . '/../src/Controllers/ProductController.php' => app_path('Http/Controllers/ProductController.php'),
-            __DIR__ . '/../src/Requests/StoreProductRequest.php' => app_path('Http/Requests/StoreProductRequest.php'),
-            __DIR__ . '/../src/Requests/UpdateProductRequest.php' => app_path('Http/Requests/UpdateProductRequest.php'),
+            __DIR__ . '/../Http/Controllers/ProductController.php' => app_path('Http/Controllers/ProductController.php'),
+            __DIR__ . '/../Http/Requests/StoreProductRequest.php' => app_path('Http/Requests/StoreProductRequest.php'),
+            __DIR__ . '/../Http/Requests/UpdateProductRequest.php' => app_path('Http/Requests/UpdateProductRequest.php'),
         ];
     
         foreach ($filesToCopy as $source => $destination) {
