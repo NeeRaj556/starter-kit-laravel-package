@@ -32,57 +32,10 @@ A ready-to-use Laravel starter kit featuring authentication and a base CRUD repo
 
 ## Installation
 
-### 1. Clone the Repository (HTTPS)
+Install the package using Composer:
 
 ```bash
-git clone https://github.com/NeeRaj556/Laravel-StarterKit-RestApi.git
-```
-
-### SSH
-
-```bash
-git clone git@github.com:NeeRaj556/Laravel-StarterKit-RestApi.git
-```
-
-### 2. Install Dependencies
-
-```bash
-composer install
-```
-
-### 3. Configure Environment
-
--   Copy `.env.example` to `.env`
--   Update database credentials and other environment variables in `.env`.
-
-```bash
-cp .env.example .env
-php artisan key:generate
-php artisan jwt:secret
-```
-
-### 4. Run Migrations
-
-```bash
-php artisan migrate
-```
-
-### 5. Seed Database (Optional)
-
-```bash
-php artisan db:seed
-```
-
-### 6. Storage Symlink Command
-
-```bash
-php artisan storage:link
-```
-
-### 7. Serve the Application
-
-```bash
-php artisan serve
+composer require neeraj/catalyst-starterkit-restapi
 ```
 
 ---
@@ -151,6 +104,76 @@ app/
 
 ---
 
+## CRUD Repository Overview
+
+The `CrudRepository` implements a centralized pattern for managing CRUD operations, designed to work seamlessly with various models. Below is an explanation of its key methods and usage:
+
+### **index**
+
+```php
+$this->interface->index(Model $model, $paginated, $folder, $files, $where, $whereNot, $search, $active, $verify, $relation);
+```
+
+-   Fetches records from the database.
+-   Supports optional filters for `where`, `whereNot`, `search`, and status (`active`, `verify`).
+-   Handles relationships (`$relation`) and dynamically includes image paths if `$files` and `$folder` are provided.
+
+### **getById**
+
+```php
+$this->interface->getById(Model $model, $id, $folder, $files, $where, $whereNot, $search, $active, $verify, $relation);
+```
+
+-   Fetches a single record by ID.
+-   Includes filters and dynamic file URLs, similar to the `index` method.
+
+### **store**
+
+```php
+$this->interface->store(Model $model, $data, $request, $folder, $files, $modified_values, $hashing_values, $relation);
+```
+
+-   Creates a new record in the database.
+-   Supports:
+    -   Dynamic image storage.
+    -   Relationships: Automatically creates related records for `hasOne`, `hasMany`, and `belongsTo` relations based on the `$relation` parameter.
+
+### **update**
+
+```php
+$this->interface->update(Model $model, $data, $id, $request, $folder, $files, $modified_values, $hashing_values, $where, $whereNot, $search, $active, $verify, $relation);
+```
+
+-   Updates an existing record by ID.
+-   Handles image updates, dynamic relationships, and field modifications.
+
+### **delete**
+
+```php
+$this->interface->delete(Model $model, $folder, $id, $where, $whereNot, $search, $active, $verify, $relation);
+```
+
+-   Deletes a record by ID, including related images stored in the specified folder.
+
+### **verify / unverify**
+
+```php
+$this->interface->verify(Model $model, $id);
+$this->interface->unverify(Model $model, $id);
+```
+
+-   Toggles the `verified` status of a record.
+
+### **getByDate / getBetweenDate**
+
+-   Fetch records based on specific date criteria.
+
+### **getMoreThan / getLessThan**
+
+-   Fetch records where a field exceeds or is less than a specified value.
+
+---
+
 ## Contributing
 
 ### **Bug Fixes and Updates**
@@ -160,7 +183,7 @@ app/
 -   For new features, create branches with descriptive names, such as `feature-event-name`.
 -   For fixes, use branch names like `fix-issue-description`.
 
-We welcome collaboration and are excited to work with you to expand this project further!
+We welcome collaboration and are excited to work with you to expand this project further! Please collaborate on [GitHub](https://github.com/NeeRaj556/Laravel-StarterKit-RestApi) and leave a star if you find this package useful.
 
 ### **Future Features**
 
@@ -183,11 +206,4 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 Niraj Bajagain (https://github.com/NeeRaj556)
 
 ---
-
-## Future Improvements
-
--   Support for more complex query filters.
--   Role and permission-based access.
--   Additional pre-built components for common use cases.
--   Enhanced relational data management to handle associations such as `hasMany`, `belongsTo`, and `many-to-many`. This will streamline building APIs for models with relational dependencies.
 
