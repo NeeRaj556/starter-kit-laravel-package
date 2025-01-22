@@ -32,7 +32,8 @@
   "scripts": {
     "post-autoload-dump": [
       "@php artisan jwt:secret --force",
-      "@php artisan storage:link"
+      "@php artisan storage:link",
+      "@php artisan migrate"
     ]
   },
   "repositories": [
