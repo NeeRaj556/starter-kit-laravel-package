@@ -38,6 +38,14 @@ Install the package using Composer:
 composer require neeraj/catalyst-starterkit-restapi
 ```
 
+
+```bash
+php artisan jwt:secret
+```
+```bash
+php artisan migrate
+```
+
 ---
 
 ## Usage
